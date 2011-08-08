@@ -56,7 +56,7 @@ Backbone.ModelBinding.Conventions = (function(){
     bind: function(selector, view, model){
       view.$(selector).each(function(index){
         var element = view.$(this);
-        var field = element.attr('id');
+        var field = element.attr('name');
         Backbone.ModelBinding.HelperMethods.bidirectionalBinding.call(view, field, element, model);
       });
     }
